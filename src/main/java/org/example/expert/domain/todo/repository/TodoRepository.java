@@ -14,6 +14,9 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
     @Query("SELECT t FROM Todo t LEFT JOIN FETCH t.user u ORDER BY t.modifiedAt DESC")
     Page<Todo> findAllByOrderByModifiedAtDesc(Pageable pageable);
 
+    @Query("SELECT t FROM Todo t LEFT JOIN FETCH t.user u WHERE t.weather =:weather order by t.modifiedAt DESC ")
+    Page<Todo> findAllByWeather(@Param("weather") String weather, Pageable pageable);
+
     @Query("SELECT t FROM Todo t " +
             "LEFT JOIN t.user " +
             "WHERE t.id = :todoId")
