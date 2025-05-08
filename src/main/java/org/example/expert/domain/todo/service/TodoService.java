@@ -60,9 +60,9 @@ public class TodoService {
         Page<Todo> todos;
 
         if (weather.isBlank()) {
-            todos = todoRepository.findAllByOrderByModifiedAtDesc(pageable);
+            todos = todoRepository.findAllByOrderByModifiedAtDesc(start, end, pageable);
         } else {
-            todos = todoRepository.findAllByWeatherAndDate(weather, start, end, pageable);
+            todos = todoRepository.findAllByWeather(weather, start, end, pageable);
         }
 
         return todos.map(todo -> new TodoResponse(
