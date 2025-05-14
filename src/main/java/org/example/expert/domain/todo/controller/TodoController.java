@@ -24,6 +24,7 @@ public class TodoController {
             @Auth AuthUser authUser,
             @Valid @RequestBody TodoSaveRequest todoSaveRequest
     ) {
+        System.out.println(1);
         return ResponseEntity.ok(todoService.saveTodo(authUser, todoSaveRequest));
     }
 
