@@ -40,9 +40,9 @@ public class AuthUserArgumentResolver implements HandlerMethodArgumentResolver {
         CustomUserPrincipal principal = (CustomUserPrincipal) authentication.getPrincipal();
 
         Long userId = principal.getUserId();
-        String email = principal.getEmail();
+        String email = principal.getUsername();
         UserRole userRole = principal.getUser().getUserRole();
-        String nickname = principal.getUsername();
+        String nickname = principal.getNickname();
 
         return new AuthUser(userId, email, userRole, nickname);
     }

@@ -30,15 +30,15 @@ public class CustomUserPrincipal implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getNickname();
+        return user.getEmail();
     }
 
     public Long getUserId() {
         return user.getId();
     }
 
-    public String getEmail() {
-        return user.getEmail();
+    public String getNickname() {
+        return user.getNickname();
     }
 
     @Override
