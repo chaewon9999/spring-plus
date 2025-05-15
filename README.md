@@ -219,4 +219,4 @@ save 메서드를 다른 트랜잭션이 관리하도록 코드 작성
                                 └── TodoControllerTest.java
 ```
 ### 트러블슈팅 및 느낀점
-> 벨로그 넣어놓을 예정입니다 !
+> [벨로그 링크](https://velog.io/@w0729/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%97%90-%EB%A7%9E%EA%B2%8C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A6%AC%EB%A5%BC-%ED%95%B4%EB%B3%B4%EC%9E%90)
